@@ -17,8 +17,8 @@ export class AppComponent implements OnInit {
   }
 
   gamesList() {
-    this.gamesService.getGames().subscribe((res: any) => {
-      this.games = res.data?.results;
+    this.gamesService.getGames().subscribe((result: any) => {
+      this.games = result?.results;
     });
   }
 }
