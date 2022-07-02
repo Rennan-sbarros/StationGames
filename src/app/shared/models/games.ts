@@ -1,5 +1,7 @@
 export interface Games {
   id: number;
   name: string;
-  slug: string;
+  released: Date;
+  rating: number;
+  background_image: string;
 }

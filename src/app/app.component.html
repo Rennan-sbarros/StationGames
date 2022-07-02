@@ -1,10 +1,5 @@
-<!-- <ul>
-  <li *ngFor="let game of games">{{ game.name }}</li>
-  <li *ngFor="let game of games">{{ game.slug }}</li>
-</ul> -->
-<div *ngFor="let game of games">
-  <ul>
-    <li>{{ game.name }}</li>
-    <li>{{ game.slug }}</li>
-  </ul>
-</div>
+<ul *ngFor="let game of games">
+  <li>{{ game.name }}</li>
+  <li>{{ game.released }}</li>
+  <li>{{ game.rating }}</li>
+</ul>
