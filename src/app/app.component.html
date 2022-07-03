@@ -1,4 +1,4 @@
-<header class="bg-purple">
+<header>
   <nav class="flex justify-around container mx-auto py-5 w-full">
     <figure class="logo">
       <!-- <a href="#"><img src="" alt="Station Games" /></a> -->
@@ -25,3 +25,14 @@
     </div>
   </nav>
 </header>
+<main class="top-games my-5">
+  <article class="flex justify-evenly gap-6 container mx-auto">
+    <figure class="w-full" *ngFor="let game of games">
+      <img
+        [src]="game.background_image"
+        class="h-full rounded-lg"
+        alt="Top Games"
+      />
+    </figure>
+  </article>
+</main>
