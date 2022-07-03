@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   BASE_URL:
-    'https://api.rawg.io/api/games?key=a7589a3b13c045ef8c5dec6e4a0953fc&platforms=187',
+    'https://api.rawg.io/api/games?key=a7589a3b13c045ef8c5dec6e4a0953fc&platforms=187&page_size=2',
 };
 
 /*
