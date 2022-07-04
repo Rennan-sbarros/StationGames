@@ -16,7 +16,7 @@
       >
     </ul>
     <div class="search-games bg-purple-bright rounded-md">
-      <i class="fa-solid fa-magnifying-glass fa-inverse p-2"></i>
+      <i class="fa-solid fa-magnifying-glass fa-inverse p-3"></i>
       <input
         type="text"
         class="bg-purple-bright font-['Poppins'] text-white outline-0 border-transparent placeholder:text-white"
@@ -25,14 +25,27 @@
     </div>
   </nav>
 </header>
-<main class="top-games my-5">
-  <article class="flex justify-evenly gap-6 container mx-auto">
-    <figure class="w-full" *ngFor="let game of games">
-      <img
-        [src]="game.background_image"
-        class="h-full rounded-lg"
-        alt="Top Games"
-      />
+<main class="top-games mb-5 mt-10">
+  <article class="flex justify-evenly container mx-auto">
+    <figure class="w-full">
+      <swiper
+        [slidesPerView]="2"
+        [spaceBetween]="25"
+        [autoplay]="{
+          delay: 2500,
+          disableOnInteraction: false
+        }"
+        (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange()"
+      >
+        <ng-template swiperSlide *ngFor="let game of games">
+          <img
+            [src]="game.background_image"
+            class="h-96 w-full rounded-lg object-cover"
+            alt="Top Games"
+          />
+        </ng-template>
+      </swiper>
     </figure>
   </article>
 </main>
