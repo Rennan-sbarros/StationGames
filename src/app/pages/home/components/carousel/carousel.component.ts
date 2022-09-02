@@ -1,16 +1,16 @@
-import { GamesService } from './../../../core/services/games.service';
-import { Games } from './../../../shared/models/games';
 import { Component, OnInit } from '@angular/core';
+import { GamesService } from 'src/app/core/services/games.service';
+import { Games } from 'src/app/shared/models/games';
 import SwiperCore, { Autoplay } from 'swiper';
 
 SwiperCore.use([Autoplay]);
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-carousel',
+  templateUrl: './carousel.component.html',
+  styleUrls: ['./carousel.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class CarouselComponent implements OnInit {
   public games!: Games[];
 
   constructor(private gamesService: GamesService) {}
